@@ -1,31 +1,24 @@
-#include <iostream>
-#include <string>
 #include "MainComponent.h"
 
 using namespace std;
 
-int main()
-{
-	run();
-	return 0;
+//variables
+const int MainComponent::WIDTH = 800;
+const int MainComponent::HEIGHT = 600;
+const string MainComponent::TITLE = "3D Game Engine";
+const double MainComponent::FRAME_CAP = 500.0;
+
+MainComponent::MainComponent(){
+	initilize();
+}
+void MainComponent::initilize(){
+	
 }
 
-class MainComponent
-{
-public:
-	const static int WIDTH = 800;
-	const static int HEIGHT = 600;
-	
-};
-
-
-
-
-
-
-
-
-void run()
+int main()
 {
 	MainComponent game;
+	cin.ignore();
+	cin.get();
+	return 0;
 }
