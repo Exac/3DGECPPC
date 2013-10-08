@@ -1,6 +1,11 @@
 #include <iostream>
 #include <string>
 #include <windows.h>
+
+#include "Attenuation.h"
+#include "BaseLight.h"
+#include "Vector3f.h"
+
 #include "Game.h"
 
 using namespace std;

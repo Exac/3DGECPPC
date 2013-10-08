@@ -78,12 +78,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Attenuation.cpp" />
+    <ClCompile Include="BaseLight.cpp" />
     <ClCompile Include="MainComponent.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Vector3f.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Attenuation.h" />
+    <ClInclude Include="BaseLight.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="MainComponent.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Vector3f.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
