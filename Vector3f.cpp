@@ -1,8 +1,9 @@
 #include "Vector3f.h"
 
-#define _USE_MATH_DEFINES
+#define _USE_MATH_DEFINES	//toRadians()
 
-#include <math.h>
+#include <math.h>			//toRadians(), rotate()
+#include <sstream>			//toString()
 
 Vector3f::Vector3f(float x_, float y_, float z_)
 {
@@ -104,29 +105,31 @@ Vector3f Vector3f::abs()
 }
 string Vector3f::toString()
 {
-
+	ostringstream ostr;
+	ostr << "(" << x << " " << y << " " << z << ")";
+	return ostr.str();
 }
 float Vector3f::getX()
 {
-
+	return x;
 }
 void Vector3f::setX(float x_)
 {
-
+	x = x_;
 }
 float Vector3f::getY()
 {
-
+	return y;
 }
 void Vector3f::setY(float y_)
 {
-
+	y = y_;
 }
 float Vector3f::getZ()
 {
-
+	return z;
 }
 void Vector3f::setZ(float z_)
 {
-
+	z = z_;
 }
