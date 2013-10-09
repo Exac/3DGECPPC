@@ -1,3 +1,4 @@
+#include "Quaternion.h"
 #include "Vector3f.h"
 
 #define _USE_MATH_DEFINES	//toRadians()
