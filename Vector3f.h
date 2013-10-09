@@ -10,6 +10,7 @@ private:
 	float z;
 public:
 	Vector3f(float, float, float);
+	float toRadians(float);
 	float length();
 	float dot(Vector3f);
 	Vector3f cross(Vector3f);

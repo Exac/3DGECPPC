@@ -1,4 +1,7 @@
 #include "Vector3f.h"
+
+#define _USE_MATH_DEFINES
+
 #include <math.h>
 
 Vector3f::Vector3f(float x_, float y_, float z_)
@@ -31,45 +34,73 @@ Vector3f Vector3f::normalized()
 	Vector3f *normalized = new Vector3f(x / length, y / length, z / length);
 	return *normalized;
 }
-Vector3f Vector3f::rotate(float, Vector3f)
+float Vector3f::toRadians(float degrees_)
 {
+	double radians = (degrees_ / 360) * (2.0 * M_PI);
+	return radians;
+}
+Vector3f Vector3f::rotate(float angle, Vector3f axis)
+{
+	float sinHalfAngle = (float)sin(this->toRadians(angle / 2));
+	float cosHalfAngle = (float)cos(this->toRadians(angle / 2));
 
+	float rX = axis.getX() * sinHalfAngle;
+	float rY = axis.getY() * sinHalfAngle;
+	float rZ = axis.getZ() * sinHalfAngle;
+	float rW = cosHalfAngle;
+
+	Quaternion rotation = new Quaternion(rX, rY, rZ, rW);
+	Quaternion conjugate = rotation.conjugate();
+
+	Quaternion w = rotation.mul(this).mul(conjugate);
+
+	Vector3f *rotated =  new Vector3f(w.getX(), w.getY(), w.getZ());
+	return *rotated;
 }
 Vector3f Vector3f::add(Vector3f r)
 {
-
+	Vector3f *added = new Vector3f(x + r.getX(), y + r.getY(), z + r.getZ());
+	return *added;
 }
 Vector3f Vector3f::add(float r)
 {
-
+	Vector3f *added = new Vector3f(x + r, y + r, z + r);
+	return *added;
 }
 Vector3f Vector3f::sub(Vector3f r)
 {
-
+	Vector3f *subtracted = new Vector3f(x - r.getX(), y - r.getY(), z - r.getZ());
+	return *subtracted;
 }
 Vector3f Vector3f::sub(float r)
 {
-
+	Vector3f *subtracted = new Vector3f(x - r, y - r, z - r);
+	return *subtracted;
 }
 Vector3f Vector3f::mul(Vector3f r)
 {
-
+	Vector3f *subtracted = new Vector3f(x * r.getX(), y * r.getY(), z * r.getZ());
+	return *subtracted;
 }
 Vector3f Vector3f::mul(float r)
 {
-
+	Vector3f *subtracted = new Vector3f(x * r, y * r, z * r);
+	return *subtracted;
 }
 Vector3f Vector3f::div(Vector3f r)
 {
-
+	Vector3f *subtracted = new Vector3f(x / r.getX(), y / r.getY(), z / r.getZ());
+	return *subtracted;
 }
 Vector3f Vector3f::div(float r)
 {
-
+	Vector3f *subtracted = new Vector3f(x / r, y / r, z / r);
+	return *subtracted;
 }
 Vector3f Vector3f::abs()
 {
-
+	Vector3f *absoluteValue = new Vector3f(fabs(x),fabs(y),fabs(z));
+	return *absoluteValue;
 }
 string Vector3f::toString()
 {
