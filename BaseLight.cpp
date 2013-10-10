@@ -1,9 +1,9 @@
 #include "Vector3f.h"
 #include "BaseLight.h"
 
-BaseLight::BaseLight(Vector3f color_, float intensity_)
+BaseLight::BaseLight(Vector3f *color_, float intensity_)
 {
-	color = color_;
+	color = *color_;
 	intensity = intensity_;
 }
 Vector3f BaseLight::getColor()

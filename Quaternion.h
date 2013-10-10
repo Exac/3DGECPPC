@@ -1,6 +1,7 @@
 #include <string>
 
 using namespace std;
+class Vector3f;
 
 class Quaternion
 {

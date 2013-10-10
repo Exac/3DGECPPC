@@ -51,10 +51,10 @@ Vector3f Vector3f::rotate(float angle, Vector3f axis)
 	float rZ = axis.getZ() * sinHalfAngle;
 	float rW = cosHalfAngle;
 
-	Quaternion rotation = new Quaternion(rX, rY, rZ, rW);
-	Quaternion conjugate = rotation.conjugate();
+	Quaternion *rotation = new Quaternion(rX, rY, rZ, rW);
+	Quaternion conjugate = rotation->conjugate();
 
-	Quaternion w = rotation.mul(this).mul(conjugate);
+	Quaternion w = rotation->mul(*this).mul(conjugate);
 
 	Vector3f *rotated =  new Vector3f(w.getX(), w.getY(), w.getZ());
 	return *rotated;
