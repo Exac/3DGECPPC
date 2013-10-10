@@ -1,3 +1,5 @@
+#pragma once
+
 #include "MainComponent.h"
 
 using namespace std;

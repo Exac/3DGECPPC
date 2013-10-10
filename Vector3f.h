@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 using namespace std;
 
@@ -8,6 +9,7 @@ private:
 	float y;
 	float z;
 public:
+	Vector3f();
 	Vector3f(float, float, float);
 	float toRadians(float);
 	float length();

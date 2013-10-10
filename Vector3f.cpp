@@ -6,6 +6,10 @@
 #include <math.h>			//toRadians(), rotate()
 #include <sstream>			//toString()
 
+Vector3f::Vector3()
+{
+	x = y = z = 0;
+}
 Vector3f::Vector3f(float x_, float y_, float z_)
 {
 	x = x_;
