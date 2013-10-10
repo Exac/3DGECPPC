@@ -13,4 +13,4 @@ public:
 	void setLinear(float);
 	float getExponent();
 	void setExponent(float);
-}
+};
