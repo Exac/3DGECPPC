@@ -6,7 +6,7 @@
 #include <math.h>			//toRadians(), rotate()
 #include <sstream>			//toString()
 
-Vector3f::Vector3()
+Vector3f::Vector3f()
 {
 	x = y = z = 0;
 }
