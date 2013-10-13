@@ -10,4 +10,9 @@ private:
 public:
 	Vector2f();
 	Vector2f(float, float);
+
+	float getX();
+	void setX(float);
+	float getY();
+	void setY(float);
 };

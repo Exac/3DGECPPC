@@ -17,10 +17,10 @@ public:
 	Vertex(Vector3f);
 	Vertex(Vector3f, Vector2f);
 	Vertex(Vector3f, Vector2f, Vector3f);
-	void init(Vector3f*, Vector2f*, Vector3f*);
+	void init(Vector3f, Vector2f, Vector3f);
 	Vector3f getPos();
 	void setPos(Vector3f);
-	Vector3f getTexCoord();
+	Vector2f getTexCoord();
 	void setTexCoord(Vector2f);
 	Vector3f getNormal();
 	void setNormal(Vector3f);
