@@ -10,7 +10,62 @@ private:
 public:
 	Vector2f();
 	Vector2f(float, float);
+	float length()
+	{
 
+	}
+	float dot(Vector2f)
+	{
+
+	}
+	Vector2f normalized()
+	{
+
+	}
+	Vector2f rotate(float)
+	{
+
+	}
+	Vector2f add(Vector2f)
+	{
+
+	}
+	Vector2f add(float)
+	{
+
+	}
+	Vector2f sub(Vector2f)
+	{
+
+	}
+	Vector2f sub(float)
+	{
+
+	}
+	Vector2f mul(Vector2f)
+	{
+
+	}
+	Vector2f mul(float)
+	{
+
+	}
+	Vector2f div(Vector2f)
+	{
+
+	}
+	Vector2f div(float)
+	{
+
+	}
+	Vector2f abs()
+	{
+
+	}
+	string toString()
+	{
+
+	}
 	float getX();
 	void setX(float);
 	float getY();
