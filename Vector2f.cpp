@@ -41,45 +41,47 @@ Vector2f Vector2f::rotate(float angle)
 
 	return Vector2f( (float)(x*cos-y*sin), (float)(x*sin+y*cos) );
 }
-Vector2f Vector2f::add(Vector2f)
+Vector2f Vector2f::add(Vector2f r)
+{
+	return Vector2f(x + r.getX(), y + r.getY());
+}
+Vector2f Vector2f::add(float r)
+{
+	Vector2f(x + r, y + r);
+}
+Vector2f Vector2f::sub(Vector2f r)
+{
+	return Vector2f(x - r.getX(), y - r.getY());
+}
+Vector2f Vector2f::sub(float r)
+{
+	return Vector2f(x - r, y - r);
+}
+Vector2f Vector2f::mul(Vector2f r)
 {
 
 }
-Vector2f Vector2f::add(float)
+Vector2f Vector2f::mul(float r)
 {
-
+	return Vector2f(x * r, y * r);
 }
-Vector2f Vector2f::sub(Vector2f)
+Vector2f Vector2f::div(Vector2f r)
 {
-
+	return Vector2f(x / r.getX(), y / r.getY());
 }
-Vector2f Vector2f::sub(float)
+Vector2f Vector2f::div(float r)
 {
-
-}
-Vector2f Vector2f::mul(Vector2f)
-{
-
-}
-Vector2f Vector2f::mul(float)
-{
-
-}
-Vector2f Vector2f::div(Vector2f)
-{
-
-}
-Vector2f Vector2f::div(float)
-{
-
+	return Vector2f(x / r, y / r);
 }
 Vector2f Vector2f::abs()
 {
-
+	return Vector2f(fabs(x) , fabs(y));
 }
 string Vector2f::toString()
 {
-
+	ostringstream ostr;
+	ostr << "(" << x << " " << y << " " << ")";
+	return ostr.str();
 }
 float Vector2f::getX()
 {
