@@ -31,7 +31,7 @@ Quaternion Quaternion::mul(Quaternion r)
 	float z_ = z * r.getW() + w * r.getZ() + x * r.getY() - y * r.getX();
 
 	Quaternion *product =  new Quaternion(x_, y_, z_, w_);
-	return *product;
+	return *product;     
 }
 Quaternion Quaternion::mul(Vector3f r)
 {

@@ -82,6 +82,7 @@
     <ClCompile Include="BaseLight.cpp" />
     <ClCompile Include="MainComponent.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Matrix4f.cpp" />
     <ClCompile Include="Quaternion.cpp" />
     <ClCompile Include="Vector2f.cpp" />
     <ClCompile Include="Vector3f.cpp" />
@@ -93,6 +94,7 @@
     <ClInclude Include="BaseLight.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="MainComponent.h" />
+    <ClInclude Include="Matrix4f.h" />
     <ClInclude Include="Quaternion.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Vector2f.h" />

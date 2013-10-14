@@ -18,5 +18,7 @@ public:
 	Matrix4f initProjection(float fox, float width, float height, float zNear, float zFar);
 	Matrix4f initCamera(Vector3f forward, Vector3f up);
 	Matrix4f mul(Matrix4f);
-	vector<float vector<float> > getM();
+	float* getM(); //float[][]
+	void setM(float m[4][4]);
+	void set(int, int, float value);
 };
